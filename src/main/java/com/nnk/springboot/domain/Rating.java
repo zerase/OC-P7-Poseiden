@@ -17,17 +17,17 @@ public class Rating {
 	@Column(name = "id")
 	private Integer id;
 	
-	@Pattern(regexp = "^[A-Za-z]*$", message = "MoodysRating has to be text")
+	@Pattern(regexp = "^[A-Z a-z]*$", message = "MoodysRating has to be text")
 	@NotBlank(message = "MoodysRating is mandatory")
 	@Column(name = "moodysRating", length = 125)
 	private String moodysRating;
 	
-	@Pattern(regexp = "^[A-Za-z]*$", message = "SandPRating has to be text")
+	@Pattern(regexp = "^[A-Z a-z]*$", message = "SandPRating has to be text")
 	@NotBlank(message = "SandPRating is mandatory")
 	@Column(name = "sandPRating", length = 125)
 	private String sandPRating;
 	
-	@Pattern(regexp = "^[A-Za-z]*$", message = "Fitch has to be text")
+	@Pattern(regexp = "^[A-Z a-z]*$", message = "Fitch has to be text")
 	@NotBlank(message = "Fitch is mandatory")
 	@Column(name = "fitchRating", length = 125)
 	private String fitchRating;

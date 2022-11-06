@@ -18,12 +18,12 @@ public class BidList {
 	@Column(name = "bidListId")
 	private Integer bidListId;
 	
-	@Pattern(regexp = "^[A-Za-z]*$", message = "Account has to be text")
+	@Pattern(regexp = "^[A-Z a-z]*$", message = "Account has to be text")
 	@NotBlank(message = "Account is mandatory")
 	@Column(name = "account", length = 30)
 	private String account;
 	
-	@Pattern(regexp = "^[A-Za-z]*$", message = "Type has to be text")
+	@Pattern(regexp = "^[A-Z a-z]*$", message = "Type has to be text")
 	@NotBlank(message = "Type is mandatory")
 	@Column(name = "type", length = 30)
 	private String type;

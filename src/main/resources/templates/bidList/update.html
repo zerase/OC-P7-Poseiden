@@ -14,9 +14,7 @@
 
 	<div class="row">
 		<form action="#" th:action="@{/bidList/update/{id}(id=${bidList.bidListId})}" th:object="${bidList}" method="post" class="form-horizontal" style="width: 100%">
-			<!--
-			TODO: Create a form to edit the values of Bid, there are 2 buttons: Update data and Cancel to the list Bid
-			 -->
+			<!-- DONE: Create a form to edit the values of Bid, there are 2 buttons: Update data and Cancel to the list Bid -->
 			 <div class="form-group">
 				<label for="account" class="col-sm-2 control-label">Account</label>
 				<div class="col-sm-10">

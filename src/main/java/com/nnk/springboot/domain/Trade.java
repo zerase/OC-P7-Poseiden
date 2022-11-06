@@ -19,19 +19,19 @@ public class Trade {
 	@Column(name = "tradeId")
 	private Integer tradeId;
 	
-	@Pattern(regexp = "^[A-Za-z]*$", message = "Account has to be text")
+	@Pattern(regexp = "^[A-Z a-z]*$", message = "Account has to be text")
 	@NotBlank(message = "Account is mandatory")
 	@Column(name = "account", length = 30)
 	private String account;
 	
-	@Pattern(regexp = "^[A-Za-z]*$", message = "Type has to be text")
+	@Pattern(regexp = "^[A-Z a-z]*$", message = "Type has to be text")
 	@NotBlank(message = "Type is mandatory")
 	@Column(name = "type", length = 30)
 	private String type;
 	
 	@Digits(integer = 10, fraction = 2)
 	@Min(value = 0, message = "Must be positive")
-	@NotNull(message = "Numbers required")
+	//@NotNull(message = "Numbers required")
 	@Column(name = "buyQuantity")
 	private Double buyQuantity;
 	

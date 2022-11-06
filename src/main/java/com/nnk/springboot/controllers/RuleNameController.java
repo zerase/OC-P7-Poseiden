@@ -21,7 +21,7 @@ public class RuleNameController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(RuleNameController.class);
 	
-    // TODO: Inject RuleName service
+    // DONE: Inject RuleName service
 	private final RuleNameService ruleNameService;
 
 	@Autowired
@@ -59,7 +59,7 @@ public class RuleNameController {
 
     @GetMapping("/ruleName/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
-        // TODO: get RuleName by Id and to model then show to the form
+        // DONE: get RuleName by Id and to model then show to the form
     	logger.info("Request GET for ruleName/update/{}", id);
     	RuleName ruleName = ruleNameService.getRuleNameById(id);
     	model.addAttribute("ruleName", ruleName);
@@ -69,7 +69,7 @@ public class RuleNameController {
     @PostMapping("/ruleName/update/{id}")
     public String updateRuleName(@PathVariable("id") Integer id, @Valid RuleName ruleName,
                              BindingResult result, Model model) {
-        // TODO: check required fields, if valid call service to update RuleName and return RuleName list
+        // DONE: check required fields, if valid call service to update RuleName and return RuleName list
     	logger.info("Request POST for ruleName/update/{}", id);
     	if(result.hasErrors()) {
     		model.addAttribute("ruleName", ruleName);
@@ -84,7 +84,7 @@ public class RuleNameController {
 
     @GetMapping("/ruleName/delete/{id}")
     public String deleteRuleName(@PathVariable("id") Integer id, Model model) {
-        // TODO: Find RuleName by Id and delete the RuleName, return to Rule list
+        // DONE: Find RuleName by Id and delete the RuleName, return to Rule list
     	logger.info("Request GET for ruleName/delete/{}", id);
     	ruleNameService.deleteRuleName(id);
         return "redirect:/ruleName/list";
